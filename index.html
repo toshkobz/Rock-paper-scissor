@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+        let userChoice = prompt('Enter one of the following: Rock,Paper or Scissors');
+
+        userChoice = userChoice.toLowerCase();
+
+        function computerRandom() {
+
+            let random = Math.floor(Math.random() * 3);
+
+            if (random === 0) {
+                return 'rock'
+                
+            } else if (random === 1) {
+                return 'paper'
+            } else {
+                return 'scissors'
+            }
+            
+        }
+
+        let computerChoice = computerRandom();
+
     </script>
 </head>
 <body>
