@@ -26,6 +26,30 @@
 
         let computerChoice = computerRandom();
 
+
+        function decideWinner(player, comp) {
+               if (userChoice === 'rock' && computerChoice === 'rock') {
+
+                         return 'Draw'
+
+                    } else if (
+                        userChoice === 'rock' && computerChoice === 'scissors' ||
+                        userChoice === 'paper' && computerChoice === 'rock'  ||
+                        userChoice === 'scissors' && computerChoice === 'paper'
+                                ) {
+                                    return 'Player wins!'
+                                } else if (userChoice === '') {
+                                    return 'Please enter something'
+                                } else if (!(userChoice === 'rock' ||
+                                        userChoice === 'paper' ||
+                                        userChoice === 'scissors')) {
+                                            return 'Please enter one of the following: Rock,Paper or Scissors'
+                                        } else {
+                                            return 'Computer wins!'
+                                        }
+                            } 
+
+
     </script>
 </head>
 <body>
